@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 10px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr 1fr;
+  grid-template-areas:
+    'box1 box3 box3'
+    'box5 box5 box4'
+    'box8 box8 box7'
+    'box10 box10 box10';
+  gap: 10px;
+  text-align: center;
+}
+
+div[class*='box'] {
+  border-radius: 20px;
+}
+
+/* her bir div elementinin içerisinde bulunan p elementi ortalansın */
+div[class*='box'] p {
+  margin: auto;
+  padding: 10px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.box1 {
+  grid-area: box1;
+  background: red;
+}
+
+.box2 {
+  grid-area: box2;
+  background: rgb(255, 230, 0);
+}
+
+.box3 {
+  grid-area: box3;
+  background: rgb(145, 255, 0);
+}
+
+.box4 {
+  grid-area: box4;
+  background: rgb(0, 255, 242);
+}
+
+/* START aside grid section */
+.box5 {
+  grid-area: box5;
+  background: rgb(0, 162, 255);
+
+  display: grid;
+  padding: 5%;
+  gap: 5%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    'small1 small1 small2'
+    'small1 small1 small2'
+    'small3 small3 small2';
+  text-align: center;
+}
+
+.small1 {
+  border-radius: 20px;
+
+  grid-area: small1;
+  background: rgb(141, 190, 76);
+}
+.small2 {
+  border-radius: 20px;
+
+  grid-area: small2;
+  background: rgb(187, 181, 92);
+}
+.small3 {
+  border-radius: 20px;
+
+  grid-area: small3;
+  background: rgb(164, 179, 147);
+}
+
+/* END aside grid section */
+.box6 {
+  grid-area: box6;
+  background: rgb(111, 0, 255);
+}
+
+.box7 {
+  grid-area: box7;
+  background: rgb(255, 0, 149);
+}
+.box8 {
+  grid-area: box8;
+  background: rgb(54, 163, 50);
+}
+.box9 {
+  grid-area: box9;
+  background: rgb(19, 17, 18);
+}
+.box10 {
+  grid-area: box10;
+  background: rgb(202, 170, 189);
+}
+.box11 {
+  grid-area: box11;
+  background: rgb(148, 126, 78);
+}
